@@ -3,14 +3,13 @@
  */
 
 import * as gulp from 'gulp';
-import * as sass from 'gulp-sass';
-import * as path from 'path';
+import * as sass from 'gulp-less';
 
 gulp.task('default',()=>{
 
 });
 
-gulp.task('sass',()=>{
+gulp.task('less',()=>{
 
     sass({
         

@@ -3,10 +3,10 @@
  */
 "use strict";
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-less');
 gulp.task('default', function () {
 });
-gulp.task('sass', function () {
+gulp.task('less', function () {
     sass({});
 });
 //# sourceMappingURL=gulpfile.js.map

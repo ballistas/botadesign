@@ -7,6 +7,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-hover-dropdown": "^2.2.1",
+    "bootstrap-social": "^5.0.0",
     "commonjs": "0.0.1",
     "es5-shim": "^4.5.9",
     "es6-collections": "^0.5.6",
@@ -26,13 +27,14 @@
     "file-loader": "^0.9.0",
     "font-awesome-webpack": "0.0.4",
     "gulp": "^3.9.1",
+    "holder": "0.0.0",
+    "holderjs": "^2.9.3",
     "imports-loader": "^0.6.5",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "resolve-url-loader": "^1.6.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.x",
-    "webpack-dev-server": "^1.x"
+    "webpack": "^1.13.2"
   }
 }

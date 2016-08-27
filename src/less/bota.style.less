@@ -1,5 +1,94 @@
+@import "./../../node_modules/bootstrap/less/variables";
+@import "./../../node_modules/bootstrap/less/bootstrap";
+@import "./../../node_modules/bootstrap-social/bootstrap-social";
+
+@fa-font-path: "./../../node_modules/font-awesome/fonts";
+
+@import "./../../node_modules/font-awesome/less/font-awesome";
+
+.icon-user {
+  @extend .fa;
+  @extend .fa-user;
+}
+
+@bta-navbgcolor:#2E3641;
+@bta-navbordercolor:#EBEBEB;
+
+@bta-accent:#E05B38;
 
 body{
   font-family: 'Raleway', san-serif;
   font-weight: 400;
+}
+
+/*transition all*/
+.mixin-transition(@duration: .5s){
+  -moz-transition: all @duration;
+  -webkit-transition: all @duration;
+  transition: all @duration;
+}
+
+/*transition a/link only*/
+.mixin-hover(@color: red){
+  &:hover{
+
+  }
+}
+
+body {
+   > header{
+    background-color: @bta-navbgcolor;
+    border-bottom: 1px solid @bta-navbordercolor;
+  }
+
+  > footer{
+    padding: 20px 0px;
+    background-color: @bta-navbgcolor;
+    border-top: 1px solid @bta-navbordercolor;
+
+    article > h1 {
+      color: @bta-accent;
+      font-size: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+article.mod-bta-team{
+
+  //ab text zentrieren (rb)
+
+  section.bta-member {
+    > .bta-img {
+
+      @media (max-width: @screen-xs-max) {
+        padding: 0em 1em 0;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        padding: 2em;
+      }
+    }
+    > .bta-info {
+
+      @media (max-width: @screen-xs-max) {
+        text-align: inherit;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        text-align: center;
+      }
+
+      .quote{
+        font-style: italic;
+        &:before{
+          content:open-quote;
+        }
+        &:after{
+          content: close-quote;
+        }
+      }
+    }
+  }
 }

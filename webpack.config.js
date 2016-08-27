@@ -8,9 +8,7 @@ module.exports = {
     //context: __dirname,
     //devtool: debug ? 'inline-sourcemap' : null,
     entry: [
-        './src/js/bota.app.js',
-        'bootstrap-webpack/!./bootstrap.config.js',
-        'font-awesome-webpack/!./font-awesome.config.js'
+        './src/js/bota.app.js'
     ],
     output: {
         path: path.join(__dirname,'./dist'),
@@ -18,7 +16,10 @@ module.exports = {
     },
     module: {
         loaders:[
-            {test:/\.css$/ ,loader:'style-loader!css-loader'},
+            {test:/\.css$/ ,loader:extractCss.extract(
+                'style-loader',
+                'css-loader'
+            )},
             {test:/\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,loader:'url-loader?limit=10000&minetype=application/font-woff'},
             {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
             {test:/\.less$/,loader:extractCss.extract(
